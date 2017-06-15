@@ -41,24 +41,38 @@
     custDiv.appendChild(custImg);
 
     var custName = document.createElement('p');
+    custName.className = 'name';
     custName.innerHTML=  (cust[index].name.first + " " + cust[index].name.last).toUpperCase();
     custDiv.appendChild(custName);
 
     var custEmail = document.createElement('p');
-    custEmail.innerHTML = cust[index].email;
+    custEmail.className = 'email';
+    custEmail.innerHTML = (cust[index].email).toUpperCase();
     custDiv.appendChild(custEmail);
 
     var custAddr = document.createElement('p');
-    custAddr.innerHTML = cust[index].location.street + '<br>' +
-                        cust[index].location.city + ", " + 
-                        (cust[index].location.state).toUpperCase() + " " +
+    custAddr.innerHTML = toTitleCase(cust[index].location.street) + '<br>' +
+                        toTitleCase(cust[index].location.city) + ", " + 
+                        toTitleCase(cust[index].location.state) + " " +
                         cust[index].location.postcode;
     custDiv.appendChild(custAddr);
 
     var custPhone = document.createElement('p');
     custPhone.innerHTML = cust[index].cell;
     custDiv.appendChild(custPhone);
+
+    var custSSN= document.createElement('p');
+    custSSN.innerHTML = cust[index].id.value;
+    custSSN.className = "blur";
+    custDiv.appendChild(custSSN);
   }
 
+  function toTitleCase(str)
+  {
+      return str.replace(/\w\S*/g, function(txt){
+          return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+  }
+ 
 })();
 
