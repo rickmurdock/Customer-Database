@@ -16,7 +16,7 @@ body {
     text-align: center;
     margin: 0 auto;
     width: 80vw;
-    background-color: #FFFFFF;
+    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,10 +24,11 @@ h1 {
     font-size: 1.7em;
     text-align: center;
     padding: 30px 0;
+    background-color: white;
 }
 
 img {
-    width: 210px;
+    width: 16vw;
 }
 
 .customers {
@@ -36,36 +37,35 @@ img {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    background-color: white;
 }
 
-/*.profile {
-    width: 28vw;
-}*/
-
 .profile {
-    /*width: 250px;*/
-     width: 20%;
-    /*height: 250px;*/
+    width: 20%;
     margin: 10px;
-    /*border: 1px solid black;*/
 }
 
 .name {
     font-size: 1.2em;
     font-weight: 600;
-    padding: 10px 0 0 0;
+    padding: 10px 0 5px 0;
     color: black;
-    /*border-bottom: 1px solid green;*/
-    
+}
+
+.line {
+    text-align: center;
+    width: 10vw;
+    margin: 0 auto;
+    border-bottom: 2px solid green;
 }
 
 .email {
     color: lightgray;
-    padding: 10px;
+    padding: 15px;
 }
 
 .blur {
    color: transparent;
    text-shadow: 0 0 5px rgba(0,0,0,0.5);
-   padding: 10px;
+   padding: 10px 0 30px 0;
 }

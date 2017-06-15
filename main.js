@@ -23,8 +23,6 @@
     });
   }
 
-  getUser();
-
   function createCustomer(cust, index) {
 
     var customersClass = document.querySelector('.customers');
@@ -42,7 +40,7 @@
 
     var custName = document.createElement('p');
     custName.className = 'name';
-    custName.innerHTML=  (cust[index].name.first + " " + cust[index].name.last).toUpperCase();
+    custName.innerHTML =  (cust[index].name.first + " " + cust[index].name.last).toUpperCase();
     custDiv.appendChild(custName);
 
     var line = document.createElement('div');
@@ -56,9 +54,9 @@
 
     var custAddr = document.createElement('p');
     custAddr.innerHTML = toTitleCase(cust[index].location.street) + '<br>' +
-                        toTitleCase(cust[index].location.city) + ", " + 
-                        getStateCode(toTitleCase(cust[index].location.state)) + " " +
-                        cust[index].location.postcode;
+                         toTitleCase(cust[index].location.city) + ", " + 
+                         getStateCode(toTitleCase(cust[index].location.state)) + " " +
+                         cust[index].location.postcode;
     custDiv.appendChild(custAddr);
 
     var custPhone = document.createElement('p');
@@ -71,17 +69,14 @@
     custDiv.appendChild(custSSN);
   }
 
-  function toTitleCase(str)
-  {
-      return str.replace(/\w\S*/g, function(txt){
-          return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        });
+  function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
   }
 
   function getStateCode(state) {
-
-    var  states_hash =
-    {
+    var  states_hash = {
       'Alabama': 'AL',
       'Alaska': 'AK',
       'American Samoa': 'AS',
@@ -141,10 +136,12 @@
       'West Virginia': 'WV',
       'Wisconsin': 'WI',
       'Wyoming': 'WY'
-    }
+    };
 
     return states_hash[state];
   }
  
+  getUser();
+
 })();
 
