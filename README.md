@@ -1,6 +1,11 @@
 # Customer-Database
 The Iron Yard Project: Customer Database
 
+---
+
+### View the finished project: http://customer-database.surge.sh/
+
+---
 ## Description
 
 Let's say what we want to build an internal database of our customers so we can easily see who they all are. Since we've not started working with our own local databases yet, we will instead use an open API called Random User. This is where we will pull all of our data from.
